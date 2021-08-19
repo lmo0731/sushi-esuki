@@ -444,12 +444,23 @@ a, a:hover, a:visited {
   border-bottom: 1px solid #000000;
 }
 
-@media only screen and (max-width: 600px) {
-  .header .header-content {
-    height: 100vh;
-  }
-}
-
 .online-order {
   font-family: 'Times New Roman', Times, serif;
+}
+
+.online-order .paper {
+  padding: 20px;
+}
+
+.online-order .col {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header .header-content {
+    /* height: 100vh; */
+  }
+  .online-order .paper {
+    text-align: center;
+  }
 }
