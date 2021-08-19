@@ -60,6 +60,7 @@ a, a:hover, a:visited {
   background-color: white;
   color: white;
   text-transform: uppercase;
+  font-style: italic;
   font-size: 19px;
   color: #ffffff;
 }
@@ -256,7 +257,7 @@ a, a:hover, a:visited {
 }
 
 .home {
-  background: #edebea;
+  background: white;
 }
 
 .paper  {
@@ -373,12 +374,13 @@ a, a:hover, a:visited {
 }
 
 .contact {
-  background-color: #3c2c27;
+  background-color: #000;
 }
 
 .contact .paper {
-  background-color: #3c2c27;
+  background-color: #000;
   color: #c2c2c2;
+  text-align: center;
 }
 
 .contact a {
@@ -386,27 +388,28 @@ a, a:hover, a:visited {
 }
 
 .contact .content-title {
+
+  font-style: normal;
   font-size: 21px;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   line-height: 23px;
-  color: #c2c2c2;
+  color: #ff9600;
 }
 
 .contact .content-body {
   font-size: 17px;
   letter-spacing: 2px;
   line-height: 23px;
-  color: #c2c2c2;
+  color: #fff;
 }
 
 .footer {
   padding: 18px;
-  background-color: #000000;
+  background-color: #1f1f1f;
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 23px;
-  color: #ffffff;
-  font-family: "Acumin Pro";
+  color: #525252;
   text-align: center;
 }
 
@@ -445,4 +448,8 @@ a, a:hover, a:visited {
   .header .header-content {
     height: 100vh;
   }
+}
+
+.online-order {
+  font-family: 'Times New Roman', Times, serif;
 }

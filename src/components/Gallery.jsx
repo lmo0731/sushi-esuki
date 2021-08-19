@@ -1,10 +1,16 @@
-import { Carousel, Image } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 import { Element } from 'react-scroll'
 import { useWindowDimensions } from '../hooks'
 
 const Gallery = (props) => {
   const { storage } = props
-  const { galleryImages = [] } = storage || {}
+  const {
+    galleryImages = [
+      { image: '/uploads/bg2.png' },
+      { image: '/uploads/bg2.png' },
+      { image: '/uploads/bg2.png' }
+    ]
+  } = storage || {}
 
   const { width, height } = useWindowDimensions()
 
