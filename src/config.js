@@ -40,7 +40,35 @@ const STRUCTURE = {
   facebookAddress: { title: 'Facebook address link', type: 'text' },
   instagramAddress: { title: 'Instagram address link', type: 'text' },
   copyright: { title: 'Copyright', type: 'text' }
+}
 
+const SITES = {
+  sites: {
+    title: 'Sites',
+    type: 'array',
+    elements: {
+      siteTitle: { title: 'Site Title', type: 'text' },
+      aboutTitle: { title: 'About Title', type: 'text' },
+      aboutDescription: { title: 'About Description', type: 'textarea' },
+      orderTitle: { title: 'Order Title', type: 'text' },
+      galleryTitle: { title: 'Gallery Title', type: 'text' },
+      galleryImages: {
+        title: 'Gallery',
+        type: 'array',
+        elements: {
+          image: { title: 'Image', type: 'image' }
+        }
+      },
+      contactTitle: { title: 'Contact Title', type: 'text' },
+      contactAddress: { title: 'Concatc Address', type: 'textarea' },
+      contactUs: { title: 'Contact Us', type: 'text' },
+      contactEmail: { title: 'Email', type: 'string' },
+      contactPhone: { title: 'Phone', type: 'phone' },
+      facebookAddress: { title: 'Facebook address link', type: 'text' },
+      instagramAddress: { title: 'Instagram address link', type: 'text' },
+      copyright: { title: 'Copyright', type: 'text' }
+    }
+  }
 }
 
 const MENU = {
