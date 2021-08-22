@@ -2,21 +2,21 @@ import Head from 'next/head'
 import Contact from './Contact'
 import Menu from './Menu'
 import MenuHeader from './MenuHeader'
-import MenuNavbar from './MenuNavbar'
 
 const MenuPage = (props) => {
-  console.log(props)
-  const { storage } = props
-  const { siteTitle } = storage || {}
+  // console.log(props)
+  const { storage, menuPage } = props
+  const { restaurantName } = storage || {}
+  const { title } = menuPage || {}
   return (
     <>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{restaurantName} {title}</title>
       </Head>
       <div className='home'>
-        <MenuHeader storage={storage} />
+        <MenuHeader storage={storage} menuPage={menuPage} />
         <div className='relative'>
-          <Menu storage={storage} />
+          <Menu storage={storage} menuPage={menuPage} />
         </div>
         <Contact storage={storage} />
       </div>

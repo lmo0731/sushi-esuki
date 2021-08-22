@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "env-cmd -f ./.env/local.env nodemon src/index.js",
-    "start": "env-cmd -f ./.env/local.env next dev",
+    "start": "env-cmd -f ./.env/local.env next dev -p 3000",
     "build": "babel src -d dist && next build",
     "serve": "NODE_ENV=production env-cmd -f ./.env/prod.env node dist/index.js",
     "clean": "rm -rf dist && rm -rf .next"

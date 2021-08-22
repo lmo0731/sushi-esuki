@@ -66,6 +66,10 @@ const STRUCTURE = {
             title: 'Description',
             type: 'text'
           },
+          menuBackground: {
+            title: 'Menu Background Image',
+            type: 'image'
+          },
           menus: {
             title: 'Menu',
             type: 'array',
@@ -85,7 +89,7 @@ const STRUCTURE = {
                   },
                   description: {
                     title: 'Description',
-                    type: 'textarea'
+                    type: 'text'
                   }
                 }
               }

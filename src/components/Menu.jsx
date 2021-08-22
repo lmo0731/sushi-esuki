@@ -2,62 +2,11 @@ import { Col, Row } from 'react-bootstrap'
 import { Element } from 'react-scroll'
 
 const Menu = (props) => {
-  const { storage } = props
+  const { menuPage } = props
+  // console.log(menuPage)
   const {
-    menus = [{
-      title: 'SUSHI moriewase',
-      description: '',
-      items: [{
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }]
-    }, {
-      title: 'SUSHI moriewase',
-      description: '',
-      items: [{
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }]
-    }, {
-      title: 'SUSHI moriewase',
-      description: '',
-      items: [{
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }, {
-        title: '10 bitar',
-        price: '129:-',
-        description: '20 nigiri 10 maki'
-      }]
-    }]
-  } = storage || {}
+    menus = []
+  } = menuPage || {}
 
   return (
     <div className='menu'>

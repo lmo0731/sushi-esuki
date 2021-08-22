@@ -6,7 +6,7 @@ import Header from './Header'
 import OnlineOrder from './OnlineOrder'
 
 const HomePage = (props) => {
-  console.log(props)
+  // console.log(props)
   const { storage } = props
   const { restaurantName } = storage || {}
   return (

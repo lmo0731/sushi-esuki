@@ -32,7 +32,6 @@ const writeUsers = (users) => {
 
 try {
   const users = readUsers()
-  console.log('Asd')
   logger.info('USERS: ' + Object.keys(users))
 } catch (e) {
   if (e.code === 'ENOENT') {

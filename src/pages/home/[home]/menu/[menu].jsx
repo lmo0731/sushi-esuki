@@ -5,10 +5,16 @@ import { readFile } from '../../../../api/storage';
 export default MenuPage
 
 export async function getServerSideProps ({ params }) {
-  console.log(params)
+  const { home, menu } = params
+  // console.log(params)
+  const storage = readFile(config.STORAGE_PATH + '/storage.db')
+  const restaurant = storage.sites[home]
+  const { menuPages } = restaurant || {}
+  const menuPage = menuPages[menu] || {}
   return {
     props: {
-      storage: readFile(config.STORAGE_PATH + '/storage.db')
+      storage: restaurant,
+      menuPage
     }
   }
 }
