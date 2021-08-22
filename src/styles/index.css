@@ -65,8 +65,8 @@ a, a:hover, a:visited {
   color: #ffffff;
 }
 
+
 .mynavbar .navbar-light .navbar-nav .nav-link {
-  color: white;
   font-style: italic;
   font-weight: 400;
 }
@@ -221,6 +221,10 @@ a, a:hover, a:visited {
   z-index: 2; 
 }
 
+.home .relative .mynavbar {
+  
+}
+
 .header .logo {
   max-width: 90%;
   width: 400px;
@@ -237,7 +241,6 @@ a, a:hover, a:visited {
   padding: 20px 2px;
   background-color: #ffffff;
   margin: 15px;
-  font-family: "Acumin Pro Regular";
   text-transform: uppercase;
   font-size: 21px;
   letter-spacing: 1px;
@@ -299,7 +302,6 @@ a, a:hover, a:visited {
   color: #ffffff;
   font-weight: bold;
   margin: 15px;
-  font-family: "Acumin Pro Regular";
 }
 
 .recent-post-body {
@@ -328,7 +330,7 @@ a, a:hover, a:visited {
 
 .menu-bundle {
   padding: 30px 0;
-  border-top: 1px dashed #aaa;
+  text-align: center;
 }
 
 .menu-item-list {
@@ -336,13 +338,15 @@ a, a:hover, a:visited {
 }
 
 .menu-item {
-  padding: 30px 0;
 }
 
 .menu-item-content {
-  padding: 1px 0px;
 }
 
+.menu-item-dots {
+  border-bottom: 3px dotted #000;
+  margin: 5px 10px;
+}
 
 
 .menu-item-title, .menu-item-price, .menu-bundle-title {
@@ -353,24 +357,35 @@ a, a:hover, a:visited {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Acumin Pro Regular";
 }
+
 
 .menu-bundle-title {
   font-size: 30px;
+  font-family: 'Myriad Pro Semibold';
+}
+
+.menu-bundle-border {
+  margin: 30px 25%;
+  height: 2px;
+  background-color: #ff9600;
+}
+
+.menu-item-line {
+  font-family: 'Myriad Pro Semibold';
 }
 
 .menu-item-price {
-  color: #888;
 }
 
 .menu-item-body {
-  margin-top: 40px;
   font-size: 19px;
   letter-spacing: 1px;
   line-height: 23px;
   color: #595959;
-  text-align: center;
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 20px
 }
 
 .contact {
@@ -428,7 +443,6 @@ a, a:hover, a:visited {
   line-height: 23px;
   color: #000000;
   font-weight: bold;
-  font-family: "Acumin Pro Semibold";
 }
 
 .post-date {

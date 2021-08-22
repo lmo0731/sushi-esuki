@@ -21,9 +21,9 @@ const Link = (props) => {
   }
 }
 
-const MyNavbar = (props) => {
+const MenuNavbar = (props) => {
   const { storage } = props
-  const { homeTitle = 'Home', aboutTitle = 'About', newsTitle = 'News', galleryTitle = 'Gallery', menuTitle = 'Meny', contactTitle = 'Contact' } = storage || {}
+  const { homeTitle = 'Sushi', aboutTitle = 'Va', newsTitle = 'News', galleryTitle = 'Gallery', menuTitle = 'Meny', contactTitle = 'Contact' } = storage || {}
   return (
     <div className='mynavbar d-flex justify-content-center ontop'>
       <Navbar collapseOnSelect expand='md' className='w-100' variant='dark'>
@@ -31,11 +31,10 @@ const MyNavbar = (props) => {
         <Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
           <Nav className='content mr-auto'>
             <Link href='#header' to='header'>{homeTitle}</Link>
-            <Link href='#about' to='about'>{aboutTitle}</Link>
-            <Nav.Link href='/posts'>{newsTitle}</Nav.Link>
-            <Link href='#gallery' to='gallery'>{galleryTitle}</Link>
-            <Link href='#menu' to='menu'>{menuTitle}</Link>
-            <Link href='#contact' to='contact'>{contactTitle}</Link>
+            <Link href='#menu1' to='menu'>{menuTitle} 1</Link>
+            <Link href='#menu2' to='menu'>{menuTitle} 2</Link>
+            <Link href='#menu3' to='menu'>{menuTitle} 3</Link>
+            <Link href='#menu4' to='menu'>{menuTitle} 4</Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -43,4 +42,4 @@ const MyNavbar = (props) => {
   )
 }
 
-export default MyNavbar
+export default MenuNavbar
