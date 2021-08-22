@@ -2,7 +2,7 @@ import Head from 'next/head'
 import CoverHeader from './CoverHeader'
 
 const MainPage = (props) => {
-  const { storage, posts } = props
+  const { storage } = props
   const { siteTitle } = storage || {}
   return (
     <>

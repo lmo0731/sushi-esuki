@@ -2,18 +2,19 @@ import { Col, Row } from 'react-bootstrap'
 import { Element } from 'react-scroll'
 
 const OnlineOrder = (props) => {
-  const { title } = props
+  const { storage } = props
+  const { orderText, orderUrl, orderImage = '/uploads/forkbutton.png' } = storage
   return (
     <div className='online-order'>
-      <Element id='online-order' />
+      <Element id='order' />
       <div className='content paper'>
         <Row>
           <Col className='d-flex align-items-center justify-content-center'>
-            Boka bord på de bästa restaurangerna.
+            {orderText}
           </Col>
           <Col className='d-flex align-items-center justify-content-center'>
-            <a href=''>
-              <img src='/uploads/forkbutton.png' height='50' />
+            <a href={orderUrl}>
+              <img src={orderImage} height='50' />
             </a>
           </Col>
         </Row>

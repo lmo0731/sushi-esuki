@@ -5,12 +5,16 @@ import { Element } from 'react-scroll'
 const Contact = (props) => {
   const { storage } = props
   const {
-    contactTitle, aboutTelephone,
-    socialTitle, addressTitle,
-    facebookAddress, instagramAddress,
-    contactLatLong, contactEmail,
-    timeTableTitle, timeTables = [],
-    aboutAddressLine1, aboutAddressLine2,
+    addressLine1,
+    addressLine2,
+    restaurantName,
+    contactTitle,
+    contactEmail,
+    contactPhone,
+    timeTableTitle,
+    timeTables = [],
+    facebookAddress,
+    instagramAddress,
     copyright
   } = storage || {}
   return (
@@ -19,26 +23,29 @@ const Contact = (props) => {
         <div className='content paper'>
           <Row>
             <Col xs={12} sm={12} md={4} lg={4}>
-              <div className='content-title bold'>RAMEN HOUSE</div>
+              <div className='content-title bold'>{restaurantName}</div>
               <div className='content-body'>
-                Råsundavägen 126
-                169 50 Solna
-                Stockholm, Sweden
+                {addressLine1}<br />
+                {addressLine2}
               </div>
             </Col>
             <Col xs={12} sm={12} md={4} lg={4}>
-              <div className='content-title bold'>RAMEN HOUSE</div>
+              <div className='content-title bold'>{contactTitle}</div>
               <div className='content-body'>
-
-                ramenhouse.esuki@gmail.com
-                +46 08-96 80 88
+                {contactEmail}<br />
+                {contactPhone}
               </div>
             </Col>
             <Col xs={12} sm={12} md={4} lg={4}>
-              <div className='content-title bold'>RAMEN HOUSE</div>
+              <div className='content-title bold'>{timeTableTitle}</div>
               <div className='content-body'>
-                MÅN-FRE: 1100-2100
-                LÖR - SÖN: 1200-2130
+                {timeTables.map((t, i) => {
+                  return (
+                    <div key={i}>
+                      {t.title} {t.description}
+                    </div>
+                  )
+                })}
               </div>
             </Col>
           </Row>

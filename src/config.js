@@ -2,7 +2,7 @@ import crypto from 'crypto'
 
 const STRUCTURE = {
   siteTitle: { title: 'Site Title', type: 'text' },
-  homeBackground: { title: 'Home Background Image', type: 'image' },
+  siteBackground: { title: 'Site Background Image', type: 'image' },
   sites: {
     type: 'array',
     title: 'Restaurant',
@@ -11,10 +11,11 @@ const STRUCTURE = {
       menuNavbarTitle: { title: 'Menu Navbar title', type: 'text' },
       orderNavbarTitle: { title: 'Order Navbar title', type: 'text' },
       galleryNavbarTitle: { title: 'Gallery Navbar title', type: 'text' },
+      contactNavbarTitle: { title: 'Contact Navbar title', type: 'text' },
       //
       restaurantName: { title: 'Restaurant Name', type: 'text' },
-      aboutAddressLine1: { title: 'Restaurant Address Line 1', type: 'text' },
-      aboutAddressLine2: { title: 'Restaurant Address Line 2', type: 'text' },
+      addressLine1: { title: 'Restaurant Address Line 1', type: 'text' },
+      addressLine2: { title: 'Restaurant Address Line 2', type: 'text' },
       restaurantBackground: { title: 'Restaurant Background Image', type: 'image' },
       //
       aboutTitle: { title: 'About Title', type: 'text' },
@@ -22,6 +23,7 @@ const STRUCTURE = {
       //
       orderText: { title: 'Order Text', type: 'text' },
       orderUrl: { title: 'Order Link', type: 'text' },
+      orderImage: { title: 'Order Image', type: 'image' },
       //
       galleryTitle: { title: 'Gallery Title', type: 'text' },
       galleryImages: {

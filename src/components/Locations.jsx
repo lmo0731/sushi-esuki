@@ -25,7 +25,7 @@ const Location = (props) => {
       ref={ref}
     >
       <div className='location-title'>
-        {title} {visible ? '1' : 0}
+        {title}
       </div>
       <div className='location-desc'>
         {children}
@@ -35,32 +35,8 @@ const Location = (props) => {
 }
 
 export const Locations = (props) => {
-  const locations = [{
-    title: 'Ramen House',
-    address: `Råsundavägen 126
-    169 50 Solna
-    Stockholm, Sweden `
-  }, {
-    title: 'Ramen House 1',
-    address: `Råsundavägen 126
-    169 50 Solna
-    Stockholm, Sweden `
-  }, {
-    title: 'Ramen House 2',
-    address: `Råsundavägen 126
-    169 50 Solna
-    Stockholm, Sweden `
-  }, {
-    title: 'Ramen House 2',
-    address: `Råsundavägen 126
-    169 50 Solna
-    Stockholm, Sweden `
-  }, {
-    title: 'Ramen House 2',
-    address: `Råsundavägen 126
-    169 50 Solna
-    Stockholm, Sweden `
-  }]
+  const { storage } = props
+  const { sites: locations = [] } = storage || {}
 
   const [selected, setSelected] = useState(0)
   const [interval, setInterval] = useState()
@@ -120,10 +96,11 @@ export const Locations = (props) => {
         {locations.map((location, i) => {
           return (
             <Location
-              key={i} itemId={i} title={location.title} selected={selected}
+              key={i} itemId={i} title={location.restaurantName} selected={selected}
               onClick={onClick(i)}
             >
-              {location.address}
+              {location.addressLine1}<br />
+              {location.addressLine2}
             </Location>
           )
         })}

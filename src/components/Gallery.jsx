@@ -6,8 +6,6 @@ const Gallery = (props) => {
   const { storage } = props
   const {
     galleryImages = [
-      { image: '/uploads/bg2.png' },
-      { image: '/uploads/bg2.png' },
       { image: '/uploads/bg2.png' }
     ]
   } = storage || {}

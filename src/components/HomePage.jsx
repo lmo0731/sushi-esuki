@@ -8,11 +8,11 @@ import OnlineOrder from './OnlineOrder'
 const HomePage = (props) => {
   console.log(props)
   const { storage } = props
-  const { siteTitle } = storage || {}
+  const { restaurantName } = storage || {}
   return (
     <>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{restaurantName}</title>
       </Head>
       <div className='home'>
         <Header storage={storage} />

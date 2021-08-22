@@ -403,7 +403,7 @@ a, a:hover, a:visited {
 }
 
 .contact .content-title {
-
+  text-transform: uppercase;
   font-style: normal;
   font-size: 21px;
   letter-spacing: 0px;

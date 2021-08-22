@@ -5,11 +5,11 @@ import { Locations } from './Locations'
 
 const CoverHeader = (props) => {
   const { storage } = props
-  const { mainBackground = '/uploads/cover.png' } = storage || {}
+  const { siteBackground = '/uploads/cover.png' } = storage || {}
   return (
     <div className='cover-header'>
       <Element id='cover-header'>
-        <Parallax bgImage={mainBackground} strength={0} className='w-100'>
+        <Parallax bgImage={siteBackground} strength={0} className='w-100'>
           <div className='cover-header-content w-100 d-flex flex-column align-items-end justify-content-start'>
             <div className='cover-header-content1 d-flex flex-column align-items-end justify-content-start'>
               <dvi className='cover-header-logo'>
@@ -25,7 +25,7 @@ const CoverHeader = (props) => {
                 restaurang
               </div>
             </div>
-            <Locations />
+            <Locations storage={storage} />
           </div>
         </Parallax>
       </Element>
